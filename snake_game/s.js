@@ -122,8 +122,13 @@ function updateHighScore() {
 }
 
 function adjustSpeed() {
-    if (score % 5 === 0) {
-        speed -= 100; // Increase the speed every 5 points
+    if (score % 5 === 0 && speed > 100) { // Added a lower limit to speed
+        speed -= 100;
+        // Optional: Add visual feedback
+        canvas.classList.add('speed-up');
+        setTimeout(() => {
+            canvas.classList.remove('speed-up');
+        }, 200); // Briefly add a class for visual effect
     }
 }
 
