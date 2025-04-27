@@ -21,3 +21,7 @@ body {
 #gameCanvas {
     background-color: #000;
 }
+
+#gameCanvas.speed-up {
+    opacity: 0.8; /* Example: Briefly make the canvas slightly transparent */
+    transition: opacity 0.2s ease-in-out;
